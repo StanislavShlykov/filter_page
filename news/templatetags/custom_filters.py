@@ -12,7 +12,7 @@ def censor(value):
    text_list = value.split()
    for i in a:
       for j in range(len(text_list)):
-         if i in text_list[j]:
+         if i in text_list[j].lower():
             text_list[j] = text_list[j][0] + '*'*(len(text_list[j])-1)
    text = ' '.join(text_list)
    return text
